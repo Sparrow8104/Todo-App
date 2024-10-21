@@ -51,3 +51,19 @@ body{
     font-size: 2rem;
 
 }
+form{
+    margin-top:2.5rem;
+    width: 100%;
+    display: flex;
+    gap: 0.3rem;
+}
+form input{
+    color: var(--text);
+    padding: 0.6rem;
+    background-color: var(--secondaryBackground);
+    border: 1px solid var(--purple);
+    border-radius: 8px;
+    outline: none;
+    flex: 1;
+    width: 90%;
+}
