@@ -1,7 +1,13 @@
+document.getElementById('taskInput').addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault(); 
+        addTask();
+    }
+});
 function addTask() {
     const taskInput = document.getElementById('taskInput');
-    const taskText = taskInput.value;
-    if (taskText === '') {
+    const taskText = taskInput.value.trim();
+    if (taskText ==='') {
         alert('Please enter a task!');
         return;
     }
@@ -16,10 +22,10 @@ function addTask() {
     checkIcon.onclick = function() {
         li.classList.toggle('completed');
     };
-  
+
     const trashIcon = document.createElement('i');
     trashIcon.classList.add('fas', 'fa-trash');
-    trashIcon.onclick = function() {
+    trashIcon.onclick= function() {
         taskList.removeChild(li);
     };
   
