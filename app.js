@@ -13,10 +13,17 @@ function addTask() {
     }
   
     const taskList = document.getElementById('task-list');
-  
+    
     const li = document.createElement('li');
-    li.textContent = taskText;
-  
+    li.classList.add('task-item'); 
+
+    const textSpan=document.createElement('span');
+    textSpan.textContent=taskText;
+    textSpan.classList.add('task-text')
+
+    const iconContainer=document.createElement('div');
+    iconContainer.classList.add('icon-conatainer')
+
     const checkIcon = document.createElement('i');
     checkIcon.classList.add('fas', 'fa-check');
     checkIcon.onclick = function() {
@@ -29,8 +36,11 @@ function addTask() {
         taskList.removeChild(li);
     };
   
-    li.appendChild(checkIcon);
-    li.appendChild(trashIcon);
+    iconContainer.appendChild(checkIcon);
+    iconContainer.appendChild(trashIcon);
+
+    li.append(textSpan);
+    li.append(iconContainer)
   
     taskList.appendChild(li);
   
