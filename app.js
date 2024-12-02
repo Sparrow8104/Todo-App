@@ -22,7 +22,7 @@ function addTask() {
     textSpan.classList.add('task-text')
 
     const iconContainer=document.createElement('div');
-    iconContainer.classList.add('icon-conatainer')
+    iconContainer.classList.add('icon-container')
 
     const checkIcon = document.createElement('i');
     checkIcon.classList.add('fas', 'fa-check');

@@ -100,21 +100,45 @@ ul{
     justify-content: space-between;
     width: 98%;
 }
-li{
+
+.task-item{
     display: flex;
-    padding: 6px;
-    margin: 6px;
-    margin-right: 8px;
-    width: inherit;
     justify-content: space-between;
-    list-style: none;
+    align-items: center;
+    padding: 10px;
+    list-style: none;  
     border: 2px solid var(--purple);
     border-radius: 8px;
+    margin: 4px;
+}
+.task-text{
+    flex: 1;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.icon-container{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+
+}
+.icon-container i {
+    cursor: pointer;
+    font-size: 18px;
+    transition: color 0.3s;
+    padding: 3px;
+    border-radius: 6px;
+    border: 1px solid white;
+}
+.icon-container i:hover {
+    color:white;
+    transform: scale(1.2);
 }
 .completed {
     text-decoration: line-through;
     color: gray;
 }
+
 @media (max-width:222px) {
     .stats-container{
         
