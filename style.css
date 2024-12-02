@@ -134,9 +134,15 @@ ul{
     color:white;
     transform: scale(1.2);
 }
-.completed {
-    text-decoration: line-through;
+.completed .task-text{
+    text-decoration: none;
     color: gray;
+}
+.completed .icon-container i{
+    color:red;
+    font-size: 18px;
+    text-align: center;
+    justify-content: center;
 }
 
 @media (max-width:222px) {
